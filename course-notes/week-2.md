@@ -14,7 +14,7 @@ $log(x^n) = n.logx$
 
 When 1,000,000 is transformed using logarithm:  
 $log(10^6) = 6.log10$  
-= 6 (base 10)
+$ = 6$ (base 10)
 
 Transforming 1 similarly:  
 $log(1) = 0$  
@@ -57,5 +57,4 @@ w = (X''X)'. X''Y, where X'' is the transformation of matrix X. This can be obta
 This w matrix provides us the formula required to reach from our feature matrix X to the prediction matrix Y.
 
 Machine Learning is purely Mathematics! 
-
 
