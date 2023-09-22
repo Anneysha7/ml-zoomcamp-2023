@@ -15,7 +15,7 @@ $log(x^n) = n.logx$
 
 When 1,000,000 is transformed using logarithm:  
 $log(10^6) = 6.log10$  
-$ = 6 \; (base 10)$
+$ = 6 /; (base 10)$
 
 Transforming 1 similarly:  
 $log(1) = 0$  
