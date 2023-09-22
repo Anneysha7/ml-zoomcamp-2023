@@ -27,6 +27,8 @@ To work around this issue, we simply add 1 to every value that we might have. Th
 
 Therefore, we use `np.log1p()` instead of `np.log()`. Using `np.log()` would give us a $log(0)$ error.
 
+To undo the logarithm, use `np.expm1(y_pred)`.
+
 
 ### Train, Validate, Test (60:20:20)
 - Set seed to ensure that the shuffling can be reproduced on any computer: `np.random.seed(1)`.
@@ -58,3 +60,28 @@ This w matrix provides us the formula required to reach from our feature matrix 
 
 Machine Learning is purely Mathematics! 
 
+### Feature Engineering
+The process of designing artificial features into an algorithm.
+- For example, if we wish to work with a feature on age in 2023, we can create a feature by doing `2023 - birth_year`
+- During feature engineering, convert the columns' datatypes from `Object` to `int64`, or whatever relevant.
+- Always create a copy of the dataframe `df.copy()` before feature engineering! We do not want to add unnecessary information to our dataframe!
+- One-hot encoding: Categorical variables are converted to numbers so that it can be used as a feature in a ML model. Example: yes -> encode as 1, no -> encode as 0.
+
+### Regularisation
+Wwe are not able to find the inverse of a matrix if there exists a duplicated column. If our matrix contains features with columns nearly the same, it passes as a duplicated column. As a result, our matrix inverse will not be computed.
+
+We can avoid this issue by adding a tiny value to the diagonal elements of our matrix. This procedure makes it less likely for duplicated columns to exist.
+
+Regularisation is a hyperparameter in this case. Hyperparameters are parameters used to reduce overfitting of machine learning models. Once regularisation is introduced, we can obtain a slightly more accurate result.
+
+`sklearn` has a reglarisation technique. [Read more](https://scikit-learn.org/stable/modules/linear_model.html) to find out.
+
+### Data Tuning
+Finding the best value for hyperparameters to obtain the best result for the model. We run a `for-loop` to check different results using diffeent hyperparameter values.
+
+### Using the Model
+- Undo the logarithm for `y_pred`!
+
+### Data Visualisation
+- Seaborn is a good way to visually view our model's performance.
+- Popular graphs: histogram, line graph, scatterplot, bar chart
