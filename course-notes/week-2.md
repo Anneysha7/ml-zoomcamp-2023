@@ -52,8 +52,9 @@ X is the feature matrix.
 Y is the prediction matrix.
 w is a rectangular matrix (1xn).
 
-w = Y.X'
+w = (X''X)'. X''Y, where X'' is the transformation of matrix X. This can be obtained by using `X.T` in `numpy`.
 
 This w matrix provides us the formula required to reach from our feature matrix X to the prediction matrix Y.
 
 Machine Learning is purely Mathematics! 
+
